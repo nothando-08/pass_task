@@ -2,15 +2,15 @@ pipeline{
     agent any
 
     environment {
-        DIRECTORY_PATH= "/Users/nothando/Documents/jenkinsfile"
-        TESTING_ENVIRONTMENT= "Test-Env"
-        PRODUCTION_ENVIRONMENT= "Nothando" //replace with your name
+        DIRECTORY_PATH= "pass_task"
+        TESTING_ENVIRONTMENT= "QA"
+        PRODUCTION_ENVIRONMENT= "NothandoProd" //replace with your name
     }
     stages{
         stage('Build'){
             steps{
                 echo "Fetch the source code from the directory path specified by the environment variable: ${env.DIRECTORY_PATH}"
-                echo "Compile the code and generate any necessarry artefacts"
+                sh "ls -la ${env.DIRECTORY_PATH)
             }
         
         stage('Test'){
